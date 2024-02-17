@@ -29,6 +29,7 @@ module "instance" {
 module "lb" {
         source = "./module/lb"
 	subnets = ["module.vpc.subnet_id"]
+  aws_lb_test_security_groups =["module.vpc.security_group_id"]
 	vpc_id = module.vpc.aws_vpc
 	cidr_ipv4 = var.cidr_block 
 	target_id = module.instance.aws_instance
