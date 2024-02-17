@@ -1,0 +1,9 @@
+output "instance_ip_addr_private" {
+  value = aws_instance.demo_instance.private_ip
+  
+}
+
+output "instance_ip_addr_public" {
+  value = aws_instance.demo_instance.public_ip
+
+}
